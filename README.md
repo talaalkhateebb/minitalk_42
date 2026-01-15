@@ -32,15 +32,15 @@ Compile the project using:
 make
 
 Usage
-1️⃣ Start the server
+- Start the server
 ./server
 
 The server will display its PID:
 
 Server PID: 12345
 
-2️⃣ Send a message from the client
-./client <SERVER_PID> "Your message here"
+- Send a message from the client
+./client <PID> "Your message here"
 
 
 Example:
@@ -52,41 +52,49 @@ The server will immediately display:
 
 Hello Minitalk!
 
--Mandatory Features
+**Mandatory Features
 
-*Server prints its PID on launch
+-Server prints its PID on launch
 
-*Client sends a string to the server
+-Client sends a string to the server
 
-*Communication uses only UNIX signals
+-Communication uses only UNIX signals
 
-*Only SIGUSR1 and SIGUSR2 are used
+-Only SIGUSR1 and SIGUSR2 are used
 
-*Server can receive multiple messages without restarting
+-Server can receive multiple messages without restarting
 
-*No memory leaks
+-No memory leaks
 
-*No unexpected crashes (segfaults, double free, etc.)
+-No unexpected crashes (segfaults, double free, etc.)
 
-- Bonus Features (if implemented)
+** Bonus Features
 
-*Server sends an acknowledgment signal to the client after receiving a message
+-Server sends an acknowledgment signal to the client after receiving a message
 
-*Unicode (UTF-8) character support
+-Unicode (UTF-8) character support 👻
 
-- Implementation Details
+** Implementation Details
 
-*Each character is sent bit by bit
+-Each character is sent bit by bit
 
-*SIGUSR1 represents 0
+-SIGUSR1 represents 0
 
-*SIGUSR2 represents 1
+-SIGUSR2 represents 1
 
-*The server reconstructs characters after receiving 8 bits
+-The server reconstructs characters after receiving 8 bits
 
-*Signal handling is done using sigaction
+-Signal handling is done using sigaction
 
-- Testing
+** Testing & AI Usage
+
+AI tools were used to help  brainstorm test cases for this project.
+All test cases were reviewed, executed manually, and fully understood.
+
+No AI-generated code was copied into the project.
+All implementation, logic, and debugging were done by the author.
+
+** Testing
 
 You can test multiple clients by running:
 
@@ -96,12 +104,14 @@ You can test multiple clients by running:
 
 The server should correctly display both messages sequentially.
 
-- Notes
+** Notes
 
-*Linux does not queue signals, so timing (usleep) is important
+-Linux does not queue signals, so timing (usleep) is important
 
-*One global variable per program is used and justified
+-One global variable per program is used and justified
 
-*Project follows 42 Norm
+-Project follows 42 Norm
+
+
 
 
