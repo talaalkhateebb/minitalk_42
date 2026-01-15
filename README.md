@@ -1,6 +1,6 @@
 *This project has been created as part of the 42 curriculum by talkhati*
 
-Description
+Description:
 Minitalk is a small client-server communication program developed in C, using UNIX signals only.  
 The goal of this project is to send a string from a client process to a server process, bit by bit, using `SIGUSR1` and `SIGUSR2`.
 
