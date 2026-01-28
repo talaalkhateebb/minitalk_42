@@ -18,7 +18,6 @@ void	ack_handler(int sig)
 {
 	(void)sig;
 	g_ack = 1;
-	//write(1, "well done", 10);
 }
 
 void	send_char(int pid, char c)
